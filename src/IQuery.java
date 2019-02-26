@@ -11,4 +11,6 @@ public interface IQuery {
     void executeSQL10();
     void executeSQL11();
     void executeSQL12();
+    void executeSQL13();
+    void executeSQL14();
 }
