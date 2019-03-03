@@ -1,46 +1,47 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ApplicationTest {
-    Application app=new Application();
+    Application app = new Application();
 
-    public ApplicationTest(){
+    public ApplicationTest() {
         app.loadRecords();
     }
 
     @Test
     void executeSQL01() {
-        assertEquals(1000000 ,app.executeSQL01());
+        assertEquals(1000000, app.executeSQL01());
     }
 
     @Test
     void executeSQL02() {
-        assertEquals(11115 ,app.executeSQL02());
+        assertEquals(11115, app.executeSQL02());
     }
 
     @Test
     void executeSQL03() {
-        assertEquals(2686 ,app.executeSQL03());
+        assertEquals(2686, app.executeSQL03());
     }
 
     @Test
     void executeSQL04() {
-        assertEquals(1343 ,app.executeSQL04());
+        assertEquals(1343, app.executeSQL04());
     }
 
     @Test
     void executeSQL05() {
-        assertEquals(434650,app.executeSQL05());
+        assertEquals(434650, app.executeSQL05());
     }
 
     @Test
     void executeSQL06() {
-        assertEquals(2726  ,app.executeSQL06());
+        assertEquals(2726, app.executeSQL06());
     }
 
     @Test
@@ -48,16 +49,16 @@ class ApplicationTest {
         //127555
         //309059
         //263230
-        List<Long> expectedList = new ArrayList<>(Arrays.asList(127555L,309059L,263230L));
-        assertEquals(expectedList ,app.executeSQL07());
+        List<Long> expectedList = new ArrayList<>(Arrays.asList(127555L, 309059L, 263230L));
+        assertEquals(expectedList, app.executeSQL07());
     }
 
     @Test
     void executeSQL08() {
         //468257
         //154270
-        List<Long> expectedList = new ArrayList<>(Arrays.asList(468257L,154270L));
-        assertEquals(expectedList ,app.executeSQL08());
+        List<Long> expectedList = new ArrayList<>(Arrays.asList(468257L, 154270L));
+        assertEquals(expectedList, app.executeSQL08());
     }
 
     @Test
@@ -68,7 +69,7 @@ class ApplicationTest {
                 false, 919981L,
                 true, 80019L
         );
-        assertEquals(expectedMap ,app.executeSQL09());
+        assertEquals(expectedMap, app.executeSQL09());
     }
 
     @Test
@@ -81,7 +82,7 @@ class ApplicationTest {
                 "M", 26337L,
                 "L", 26309L
         );
-        assertEquals(expectedMap ,app.executeSQL10());
+        assertEquals(expectedMap, app.executeSQL10());
     }
 
     @Test
@@ -92,7 +93,7 @@ class ApplicationTest {
                 "C", 98830L,
                 "A", 99281L
         );
-        assertEquals(expectedMap ,app.executeSQL11());
+        assertEquals(expectedMap, app.executeSQL11());
     }
 
     @Test
@@ -119,7 +120,7 @@ class ApplicationTest {
                 "F", 2L,
                 "A", 1L
         );
-        assertEquals(expectedMap ,app.executeSQL12());
+        assertEquals(expectedMap, app.executeSQL12());
     }
 
     @Test
@@ -130,7 +131,7 @@ class ApplicationTest {
                 false, 56055016L,
                 true, 558159L
         );
-        assertEquals(expectedMap ,app.executeSQL13());
+        assertEquals(expectedMap, app.executeSQL13());
     }
 
     @Test
@@ -141,6 +142,6 @@ class ApplicationTest {
                 "D", 3095L,
                 "C", 3185L
         );
-        assertEquals(expectedMap ,app.executeSQL14());
+        assertEquals(expectedMap, app.executeSQL14());
     }
 }
